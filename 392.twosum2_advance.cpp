@@ -27,7 +27,9 @@ int main(){
                 m--;
             }
 
-            count += leftCount * rightCount;
+            // count += leftCount * rightCount;
+            // updated count for cond if same half value exist
+            count +=(leftVal != rightVal) ? leftCount * rightCount : (leftCount * (leftcount-1));
         }
     }
     cout<<count;
